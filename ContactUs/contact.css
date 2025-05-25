@@ -8,7 +8,7 @@
 @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
-         url('/fonts/Gilroy-Regular.woff') format('woff');
+        url('/fonts/Gilroy-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +16,7 @@
 @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
-         url('/fonts/Gilroy-Bold.woff') format('woff');
+        url('/fonts/Gilroy-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -32,7 +32,7 @@ body {
 
     background-color: rgba(180, 198, 255, 0.8);
     transition: transform 0.3s ease-in-out;
-   
+
 }
 
 .navbar.hidden {
@@ -44,17 +44,17 @@ body {
 .navbar li {
     padding: 5px;
     font-size: 15px;
-   
+
 }
 
 .navbar li a {
 
-     color: black;
+    color: black;
 
 }
 
 
-.navbar li a:hover{
+.navbar li a:hover {
     color: orange !important;
 
 }
@@ -67,7 +67,7 @@ body {
 
 .dswd-nav {
 
-    margin-left:130px;
+    margin-left: 130px;
     color: black;
     width: 120px;
 }
@@ -75,13 +75,13 @@ body {
 .top-container {
 
     margin-top: 50px;
-   
+
 
 }
 
 .iii {
     margin-top: 20px;
-    
+
 }
 
 p img {
@@ -322,7 +322,7 @@ p img {
 
 }
 
-.footer-container .footer-wrapper p{
+.footer-container .footer-wrapper p {
 
     font-size: 12px;
 
@@ -334,7 +334,7 @@ p img {
 
 }
 
-.footer-container .footer-wrapper p span{
+.footer-container .footer-wrapper p span {
 
     font-size: 14px;
 
@@ -351,14 +351,14 @@ p img {
     color: orange;
 }
 
-.footer-container .gov-links a{
+.footer-container .gov-links a {
 
     text-decoration: none;
     color: white;
 
 }
 
-.footer-container .gov-links a:hover{
+.footer-container .gov-links a:hover {
 
     color: orange;
 
@@ -370,35 +370,35 @@ p img {
     gap: 20px;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 
-.footer-container .stay-connected a{
+.footer-container .stay-connected a {
 
     text-decoration: none;
     color: white;
 }
 
-.footer-container .stay-connected .bxl-instagram:hover{
+.footer-container .stay-connected .bxl-instagram:hover {
 
-    color:violet;
-
-}
-
-.footer-container .stay-connected .bxl-facebook-square:hover{
-
-    color:blue;
+    color: violet;
 
 }
 
-.footer-container .stay-connected .bxl-twitter:hover{
+.footer-container .stay-connected .bxl-facebook-square:hover {
 
-    color:skyblue;
+    color: blue;
 
 }
 
-.bottom-images .carousel-item img{
+.footer-container .stay-connected .bxl-twitter:hover {
+
+    color: skyblue;
+
+}
+
+.bottom-images .carousel-item img {
 
 
     height: 200px;
@@ -414,12 +414,60 @@ p img {
 
 }
 
-@media screen and (max-width: 1500px){
+/* Feedback Table Styles */
+.feedback-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.feedback-header {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-scroll-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 2px solid black;
+    box-shadow: inset 0 0 3px 1px rgb(180, 198, 255);
+    background-color: white;
+}
+
+.feedback-table {
+    margin-bottom: 0;
+    background-color: white;
+}
+
+.feedback-table thead {
+    background-color: rgb(180, 198, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.feedback-table th {
+    font-weight: 700;
+    color: #1f315c;
+}
+
+.feedback-table td {
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.feedback-table tbody tr:hover {
+    background-color: rgba(180, 198, 255, 0.2);
+}
+
+@media screen and (max-width: 1500px) {
 
     .navbar-nav {
 
         margin-left: 400px;
-    
+
     }
 
 }
@@ -436,11 +484,11 @@ p img {
 
         margin-left: 0px;
     }
-    
 
-    .navbar li:hover{
+
+    .navbar li:hover {
         border-bottom: 1px solid white;
-    
+
     }
 
     .p1 {
@@ -468,7 +516,7 @@ p img {
         font-size: 12px;
         height: 120vh;
         background-color: #0F172A;
-    
+
     }
 
     .footer-container .page-link {
@@ -483,19 +531,57 @@ p img {
 
     }
 
-    .republic p{
+    .republic p {
 
         height: 80px !important;
 
     }
 
-    .bottom-images .carousel-item img{
+    .bottom-images .carousel-item img {
 
 
         height: 130px;
         margin-bottom: 15px;
-    
-    
+
+
     }
-    
+
+    /* Mobile responsive table styles */
+    .table-scroll-container {
+        max-height: 250px;
+    }
+
+    .feedback-table {
+        font-size: 12px;
+    }
+
+    .feedback-table td,
+    .feedback-table th {
+        padding: 8px 5px;
+    }
+
+    .feedback-table td:nth-child(4) {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Custom scrollbar for webkit browsers */
+    .table-scroll-container::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-thumb {
+        background: rgb(180, 198, 255);
+        border-radius: 4px;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #1f315c;
+    }
 }
